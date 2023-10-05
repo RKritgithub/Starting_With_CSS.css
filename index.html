@@ -1,0 +1,62 @@
+<!-- Question 1: -->
+<!-- Create a simple page with some div tags and show different ways to add CSS as well as what happens when you target the same elements with inline, internal, and external CSS. Also, utilize comments in the project where required. -->
+<!-- Answers: -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Example</title>
+    
+    <!-- Internal CSS -->
+    <style>
+        /* Internal CSS inside style */
+        .internal-div {
+            background-color: lightblue;
+            padding: 10px;
+            border: 1px solid darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Example Page</h1>
+    
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <p>This is a simple HTML page with some div tags.</p>
+    
+    <!-- Inline CSS  -->
+    <div style="background-color: lightgreen; padding: 10px; border: 1px solid darkgreen;">
+        This is a div with inline CSS.
+    </div>
+    
+    <!-- Internal CSS Class -->
+    <div class="internal-div">
+        This is a div with internal CSS.
+    </div>
+    
+    <!-- External CSS Class -->
+    <div class="external-div">
+        This is a div with external CSS.
+    </div>
+</body>
+</html>
+
+<!-- In this example: -->
+
+<!-- 1.We have an inline <div> with inline CSS inside the style attribute.
+2.We have an internal CSS section within the <style> tags in the <head> of the HTML document.
+3.We link to an external CSS file called styles.css using the <link> tag.
+4.We use a class selector (.internal-div) to apply CSS styling to one of the <div> elements. This is defined in the internal CSS section.
+5.We use another class selector (.external-div) to apply CSS styling to another <div> element. This is defined in the external CSS file.
+
+In this setup, we have demonstrated the three ways of adding CSS:
+
+Inline CSS directly in the HTML element.
+Internal CSS within the <style> tags in the <head> section of the HTML file.
+External CSS in a separate CSS file linked to the HTML file using the <link> tag.
+Each <div> has different CSS applied to it, and you can observe how these styles override or cascade in case of conflicts. The order of precedence is generally inline CSS > internal CSS > external CSS. -->
+
+
+
+
+

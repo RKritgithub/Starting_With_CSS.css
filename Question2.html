@@ -1,0 +1,67 @@
+<!-- /* Question_2: */ -->
+<!-- /* Build an HTML page with multiple paragraphs, each assigned a unique class name. Write CSS rules using class selectors to apply distinct styling to each paragraph. Follow the BEM naming convention and
+explain how you've named the classes. */
+/* Answers: */
+ BEM is a popular naming convention for writing clean and maintainable CSS. It divides class names into three parts: 
+
+Block (B): The main container or component.
+Element (E): A part or element inside the block.
+Modifier (M): A variation or modification of the block or element.
+Here's an example of an HTML page following the BEM naming convention:  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM Example</title>
+    <style>
+        /* B: Block */
+        .paragraph {
+            margin-bottom: 20px;
+        }
+
+        /* E: Element */
+        .paragraph__header {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .paragraph__content {
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* M: Modifier */
+        .paragraph--important {
+            background-color: yellow;
+        }
+
+        .paragraph--highlight {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="paragraph">
+        <p class="paragraph__header">Block 1</p>
+        <p class="paragraph__content">This is the content of Block 1.</p>
+    </div>
+
+    <div class="paragraph paragraph--important">
+        <p class="paragraph__header">Block 2 (Important)</p>
+        <p class="paragraph__content">This is the important content of Block 2.</p>
+    </div>
+
+    <div class="paragraph paragraph--highlight">
+        <p class="paragraph__header">Block 3 (Highlighted)</p>
+        <p class="paragraph__content">This is the highlighted content of Block 3.</p>
+    </div>
+</body>
+</html>
+<!-- /* In this example:
+
+1.Each paragraph is a "Block" and is given the class name "paragraph."
+2.Within each block, there are "Element" classes for the header and content, named "paragraph__header" and "paragraph__content," respectively.
+3.There are also "Modifier" classes to apply additional styling, such as "paragraph--important" and "paragraph--highlight" for variations of the block.
+4.This structure makes it clear which styles are applied to specific elements and variations, making your CSS more maintainable and readable. */ -->
+

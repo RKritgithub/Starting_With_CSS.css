@@ -1,0 +1,110 @@
+<!-- Question 3: -->
+<!-- Develop an HTML form with various input elements. Use CSS to style the form, including setting
+background colors for input fields. Create a custom color palette for the form elements, and demonstrate.how to apply opacity to one of the form sections. -->
+<!-- Answers: -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Form</title>
+    <style>
+        /* Custom color palette */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #e74c3c;
+            --background-color: #f2f2f2;
+            --form-opacity: 0.7;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            opacity: var(--form-opacity);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Styled Form</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Your password">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your message"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
+
+<!-- In this example: -->
+
+<!-- 1.We define custom colors using CSS variables (e.g., --primary-color, --secondary-color, --background-color, and --form-opacity) in the :root pseudo-class. -->
+
+<!-- 2.The form is placed inside a container with a white background, rounded corners, and a box shadow to create a card-like effect. We apply the opacity to the container to demonstrate how to make it semi-transparent. -->
+
+<!-- Input fields have background colors defined using the custom color palette, and they are styled with appropriate padding, borders, and text colors. -->
+
+<!-- The submit button is styled with a hover effect to change the background color when the cursor hovers over it. -->
